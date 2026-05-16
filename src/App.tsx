@@ -54,8 +54,8 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col max-w-3xl mx-auto p-6 md:p-10 space-y-8">
       {/* 1. Latest Number Display Area */}
-      <section id="latest-display" className="w-full">
-        <div className="relative group w-full aspect-[16/9] sm:aspect-[21/9]">
+      <section id="latest-display" className="w-full flex justify-center">
+        <div className="relative group w-full aspect-square max-w-md">
           <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-10 transition duration-1000"></div>
           <div className="relative bg-white border border-slate-200 rounded-3xl w-full h-full flex flex-col items-center justify-center shadow-sm overflow-hidden">
             <div className="absolute top-6 left-8 flex items-center gap-2 opacity-50">
@@ -72,7 +72,7 @@ export default function App() {
                 animate={{ scale: 1, opacity: 1, filter: 'blur(0px)' }}
                 exit={{ scale: 1.1, opacity: 0, filter: 'blur(15px)' }}
                 transition={{ type: 'spring', damping: 12, stiffness: 100 }}
-                className="text-[9rem] md:text-[12rem] font-black text-slate-800 tabular-nums leading-none select-none drop-shadow-sm"
+                className="text-[10rem] md:text-[14rem] font-black text-slate-800 tabular-nums leading-none select-none drop-shadow-sm"
               >
                 {currentNumber ?? '--'}
               </motion.span>
